@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 export default function() {
     const navigate=useNavigate()
+    const [toggle,setToggle]=useState(false)
     const [username,setUsername]=useState('')
     const [password,setPassword]=useState('')
     async function Submit(e){
@@ -37,7 +38,8 @@ export default function() {
         </div>
         <div style={{marginBottom:'12px'}}>
         <span style={{padding:'5px 12px', fontWeight:'bold'}}>Password</span>
-        <input style={{padding:'5px 5px', borderRadius:'12px',border:'1px solid #696969'}} type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='password' required/>
+        <input style={{padding:'5px 5px', borderRadius:'12px',border:'1px solid #696969'}} type={toggle?'text':'password'} value={password}  onChange={(e)=>setPassword(e.target.value)} placeholder='password' required/>
+        <button style={{backgroundColor:'#0066FF',padding:'5px',color:'white'}} onClick={()=>setToggle(e=>!e)}>{toggle?'hide':'show'}</button>
         </div>
         <button style={{background:'#0066FF',color:'white'}} onClick={Submit}>Submit</button>
       </form>
