@@ -32,7 +32,7 @@ export default function() {
         <h2 style={{marginBottom:'18px'}}>Login page</h2>
       <form method='POST'>
       <div style={{marginBottom:'12px'}}>
-        <span style={{padding:'5px 12px', fontWeight:'bold'}}>Email</span>
+        <span style={{padding:'5px 12px', fontWeight:'bold'}}>Username</span>
         <input style={{padding:'5px 5px', borderRadius:'12px',border:'1px solid #696969'}} type="text" value={username} onChange={(e)=>setUsername(e.target.value)} placeholder='Username' required/>
         </div>
         <div style={{marginBottom:'12px'}}>
