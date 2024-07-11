@@ -10,7 +10,7 @@ export default function SignUp() {
     async function Submit(e){
         e.preventDefault()
         try{
-            await axios.post('http://localhost:5000/register',{
+            await axios.post('https://task-1-server-eight.vercel.app/register',{
               username,email,password
             }).then(res=>{
               

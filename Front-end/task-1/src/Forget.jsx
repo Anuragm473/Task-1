@@ -9,7 +9,7 @@ export default function Forget() {
     async function Submit(e){
         e.preventDefault()
         try{
-            await axios.patch('http://localhost:5000/forget',{
+            await axios.patch('https://task-1-server-eight.vercel.app/forget',{
                 email,password
             }).then(res=>{
                 if(res.data.message==='updated'){
